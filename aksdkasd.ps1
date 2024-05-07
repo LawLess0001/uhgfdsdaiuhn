@@ -1,3 +1,7 @@
+Write-Host @'
+This shit was hard hard pasted by LAWLESS0001                
+'@
+
 param (
   [Parameter()]
   [switch]
@@ -101,10 +105,6 @@ function Test-SpotifyVersion
     return ($MinimalSupportedVersion.CompareTo($TestedVersion) -le 0)
   }
 }
-
-Write-Host @'
-This shit was hard pasted by LAWLESS0001                
-'@
 
 $spotifyDirectory = Join-Path -Path $env:APPDATA -ChildPath 'Spotify'
 $spotifyExecutable = Join-Path -Path $spotifyDirectory -ChildPath 'Spotify.exe'
