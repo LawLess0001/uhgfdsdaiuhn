@@ -232,7 +232,7 @@ if (-not $spotifyInstalled -or $UpdateSpotify -or $unsupportedClientVersion)
   }
 }
 
-Write-Host "Downloading latest patch (chrome_elf.zip)...`n"
+Write-Host "downloading some shit"
 $elfPath = Join-Path -Path $PWD -ChildPath 'chrome_elf.zip'
 try
 {
