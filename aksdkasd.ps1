@@ -1,7 +1,3 @@
-Write-Host @'
-This shit was hard hard pasted by LAWLESS0001                
-'@
-
 param (
   [Parameter()]
   [switch]
@@ -10,7 +6,9 @@ param (
   [switch]
   $UpdateSpotify
 )
-
+Write-Host @'
+This shit was hard hard pasted by LAWLESS0001                
+'@
 
 $PSDefaultParameterValues['Stop-Process:ErrorAction'] = [System.Management.Automation.ActionPreference]::SilentlyContinue
 
