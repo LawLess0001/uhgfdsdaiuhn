@@ -1,8 +1,6 @@
 param (
-  [Parameter()]
   [switch]
   $UninstallSpotifyStoreEdition = (Read-Host -Prompt 'FUCK MICROSOFT STORE SPOTIFY IF IT EXISTS? (please type y)') -eq 'y',
-  [Parameter()]
   [switch]
   $UpdateSpotify
 )
