@@ -1,6 +1,12 @@
-Write-Host @'
-This shit was hard hard pasted by LAWLESS0001                
-'@
+param (
+  [Parameter()]
+  [switch]
+  $UninstallSpotifyStoreEdition = (Read-Host -Prompt 'FUCK MICROSOFT STORE SPOTIFY IF IT EXISTS? (please type y)') -eq 'y',
+  [Parameter()]
+  [switch]
+  $UpdateSpotify
+)
+
 
 $PSDefaultParameterValues['Stop-Process:ErrorAction'] = [System.Management.Automation.ActionPreference]::SilentlyContinue
 
@@ -95,6 +101,10 @@ function Test-SpotifyVersion
     return ($MinimalSupportedVersion.CompareTo($TestedVersion) -le 0)
   }
 }
+
+Write-Host @'
+This shit was hard pasted by LAWLESS0001                
+'@
 
 $spotifyDirectory = Join-Path -Path $env:APPDATA -ChildPath 'Spotify'
 $spotifyExecutable = Join-Path -Path $spotifyDirectory -ChildPath 'Spotify.exe'
@@ -222,7 +232,7 @@ if (-not $spotifyInstalled -or $UpdateSpotify -or $unsupportedClientVersion)
   }
 }
 
-Write-Host "Downloading Components`n"
+Write-Host "Downloading latest patch (chrome_elf.zip)...`n"
 $elfPath = Join-Path -Path $PWD -ChildPath 'chrome_elf.zip'
 try
 {
