@@ -1,11 +1,12 @@
 param (
   [Parameter()]
   [switch]
-  $UninstallSpotifyStoreEdition = $true,
+  $UninstallSpotifyStoreEdition = (Read-Host -Prompt 'Uninstall Spotify Windows Store edition if it exists (Y/N)') -eq 'y',
   [Parameter()]
   [switch]
-  $UpdateSpotify = $false
+  $UpdateSpotify
 )
+
 
 $PSDefaultParameterValues['Stop-Process:ErrorAction'] = [System.Management.Automation.ActionPreference]::SilentlyContinue
 
