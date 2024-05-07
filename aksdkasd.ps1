@@ -102,7 +102,7 @@ function Test-SpotifyVersion
 }
 
 Write-Host @'
-This shit was written by LAWLESS0001                
+This shit was hard pasted by LAWLESS0001                
 '@
 
 $spotifyDirectory = Join-Path -Path $env:APPDATA -ChildPath 'Spotify'
